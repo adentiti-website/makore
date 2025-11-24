@@ -15,6 +15,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
     <style>
+        .brand {
+    font-size: 1.8rem;      /* Increase size for stronger presence */
+    font-weight: 700;
+    letter-spacing: 0.15em; /* Premium brand feel */
+    margin-left: 10px;      /* Spacing from logo image */
+}
+
+.tm {
+    font-size: 0.6rem;      /* Scaled down (proper trademark style) */
+    vertical-align: top;    /* Aligns to top right of brand text */
+    margin-left: 2px;
+    opacity: 0.9;
+}
+@media (max-width: 768px) {
+    .brand {
+        font-size: 1.4rem;
+        letter-spacing: 0.1em;
+    }
+    .tm {
+        font-size: 0.55rem;
+    }
+}
+
         @media (max-width: 768px) {
     .btn-primary,
     .btn-ghost {
@@ -258,13 +281,13 @@
 
 <body>
 <header>
-    <div class="nav">
-        <div class="logo">
-            <img src="makore-logo.png" alt="Makore Logo" style="height:60px; width:auto; border-radius:6px;">
-<span class="brand">MAKORE</span><sup class="tm">™</sup>
-        </div>
-        <div class="nav-tagline">Cybersecurity Board Game</div>
+<div class="nav">
+    <div class="logo">
+        <img src="makore-logo.png" alt="Makore Logo" style="height:60px; width:auto; border-radius:6px;">
+        <span class="brand">MAKORE</span><sup class="tm">™</sup>
     </div>
+    <div class="nav-tagline">Cybersecurity Board Game</div>
+</div>
 
     <div class="hero">
         <div>
