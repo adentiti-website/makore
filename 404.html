@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Makore Redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    (function () {
+      // Eventbrite link
+      var eventbriteUrl =
+        "https://www.eventbrite.ca/e/makore-cybersecurity-game-night-learn-cyber-safety-through-play-tickets-1981795778522?aff=oddtdtcreator";
+
+      // current path, lowercased, without trailing slash
+      var path = window.location.pathname.toLowerCase().replace(/\/+$/, "");
+
+      // paths from your cards
+      var redirectPaths = [
+        "/blackout",
+        "/flood",
+        "/lockjaw",
+        "/shadowcode",
+        "/whisper",
+        "/echo",
+        "/maka" // 
+      ];
+
+      if (redirectPaths.indexOf(path) !== -1) {
+        // send to Eventbrite
+        window.location.replace(eventbriteUrl);
+      } else {
+        // anything else: back to main site
+        window.location.replace("https://makore.ca");
+      }
+    })();
+  </script>
+</head>
+<body>
+  <p style="font-family: system-ui, sans-serif; color:#fff; background:#020617; padding:2rem;">
+    Redirecting…
+  </p>
+</body>
+</html>
