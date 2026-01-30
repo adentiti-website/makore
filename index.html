@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +13,267 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
     <style>
+               .brand {
+    font-size: 1.8rem;      /* Increase size for stronger presence */
+    font-weight: 700;
+    letter-spacing: 0.15em; /* Premium brand feel */
+    margin-left: 10px;      /* Spacing from logo image */
+}
+
+.tm {
+    font-size: 0.6rem;      /* Scaled down (proper trademark style) */
+    vertical-align: top;    /* Aligns to top right of brand text */
+    margin-left: 2px;
+    opacity: 0.9;
+}
+@media (max-width: 768px) {
+    .brand {
+        font-size: 1.4rem;
+        letter-spacing: 0.1em;
+    }
+    .tm {
+        font-size: 0.55rem;
+    }
+}
+
+        @media (max-width: 768px) {
+    .btn-primary,
+    .btn-ghost {
+        padding: 14px 30px;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    .creator-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .creator-photo-wrap {
+        margin: 0 auto;
+    }
+    .creator-info {
+        padding: 10px 12px;
+    }
+}
+        @media (max-width: 768px) {
+    .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.3;
+        margin-bottom: 12px;
+    }
+    .hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    .hero-actions {
+        flex-direction: column;
+        gap: 14px;
+    }
+}
+
+        .brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.tm {
+  font-size: 0.55em;
+  margin-left: 1px;
+  opacity: 0.75;
+}
+
+        :root {
+            --bg-dark: #050816;
+            --bg-card: #0f172a;
+            --accent: #38bdf8;
+            --accent-soft: rgba(56, 189, 248, 0.15);
+            --text-main: #e5e7eb;
+            --text-muted: #9ca3af;
+            --max-width: 960px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", system-ui, sans-serif;
+            background: radial-gradient(circle at top, #111827 0%, #020617 55%, #000000 100%);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        header {
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+            background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%);
+        }
+
+        .nav {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 16px 20px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-tagline {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .hero {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 32px 20px 56px;
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+            gap: 32px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero-meta { justify-content: center; }
+        }
+
+        .hero-kicker {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .hero-title {
+            font-size: clamp(2.1rem, 4vw, 2.9rem);
+            margin: 10px 0 12px;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            color: var(--text-muted);
+            max-width: 34rem;
+            font-size: 0.98rem;
+        }
+
+        .hero-actions {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-actions { justify-content: center; }
+        }
+
+        .btn-primary,
+        .btn-ghost {
+            border-radius: 999px;
+            padding: 11px 22px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid transparent;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 150ms ease, box-shadow 150ms ease, 
+                        background 150ms ease, border-color 150ms ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(120deg, #38bdf8, #4f46e5);
+            color: white;
+            box-shadow: 0 10px 25px rgba(15, 118, 255, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 18px 35px rgba(15, 118, 255, 0.45);
+        }
+
+        .btn-ghost {
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--text-main);
+            border-color: rgba(148, 163, 184, 0.4);
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--accent);
+            background: rgba(15, 23, 42, 1);
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            margin-top: 18px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .hero-meta-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            background: var(--accent);
+        }
+
+        .hero-card {
+            border-radius: 24px;
+            padding: 22px 22px 24px;
+            background: radial-gradient(circle at top, rgba(56, 189, 248, 0.25), rgba(15, 23, 42, 0.98));
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.85);
+        }
+
+        .hero-pill {
+            font-size: 0.78rem;
+            padding: 4px 9px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+        }
+
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px 64px;
+        }
+
+        footer {
+            border-top: 1px solid rgba(30, 64, 175, 0.8);
+            padding: 18px 20px 26px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            background: #020617;
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
         .brand {
     font-size: 1.8rem;      /* Increase size for stronger presence */
     font-weight: 700;
@@ -299,9 +558,14 @@
                 them into stories, cards, and decisions.
             </p>
 
-            <div class="hero-actions">
-                <a href="#" class="btn-primary">Join the early access list →</a>
-                <a href="#" class="btn-ghost">Watch the prototype demo</a>
+           <div class="hero-actions">
+                <!-- Both buttons now send people to Eventbrite -->
+                <a href="https://www.eventbrite.ca/e/makore-cybersecurity-game-night-learn-cyber-safety-through-play-tickets-1981795778522?aff=oddtdtcreator" class="btn-primary" target="_blank" rel="noopener">
+                    Join the game night →
+                </a>
+                <a href="https://www.eventbrite.ca/e/makore-cybersecurity-game-night-learn-cyber-safety-through-play-tickets-1981795778522?aff=oddtdtcreator" class="btn-ghost" target="_blank" rel="noopener">
+                    Watch & RSVP on Eventbrite
+                </a>
             </div>
 
             <div class="hero-meta">
