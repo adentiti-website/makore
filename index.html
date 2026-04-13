@@ -551,6 +551,137 @@
             flex-wrap: wrap;
             gap: 10px;
         }
+        .threats-section {
+    padding: 80px 20px;
+    position: relative;
+}
+
+.threats-intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 42px;
+}
+
+.section-kicker {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 0 0 12px;
+    line-height: 1.1;
+    font-weight: 700;
+    text-shadow: 0 0 18px rgba(56, 189, 248, 0.12);
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.threat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.threat-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    background:
+        linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.98));
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.threat-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(56, 189, 248, 0.16), transparent 55%);
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.threat-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(56, 189, 248, 0.45);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.72);
+}
+
+.threat-image-wrap {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.threat-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease, filter 0.45s ease;
+}
+
+.threat-card:hover .threat-image-wrap img {
+    transform: scale(1.06);
+    filter: brightness(1.05);
+}
+
+.threat-content {
+    padding: 18px 18px 22px;
+    position: relative;
+    z-index: 1;
+}
+
+.threat-content h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.threat-content p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .threat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .threats-section {
+        padding: 64px 20px;
+    }
+
+    .threat-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.95rem;
+    }
+}
     </style>
 </head>
 
@@ -634,6 +765,77 @@
             </div>
         </div>
     </section>
+    <section class="threats-section">
+    <div class="threats-intro">
+        <p class="section-kicker">Enter the threat zone</p>
+        <h2 class="section-title">Meet the Threats</h2>
+        <p class="section-subtitle">
+            Cyber threats are no longer invisible. In MAKORE, they take form so you can recognize them, understand them, and defeat them.
+        </p>
+    </div>
+
+    <div class="threat-grid">
+
+               <div class="threat-card">
+            <div class="threat-image-wrap">
+                <img src="whisper.png" alt="Whisper Threat">
+            </div>
+            <div class="threat-content">
+                <h3>Whisper</h3>
+                <p>Cyberbullying that spreads harm through messages, posts, and pressure.</p>
+            </div>
+        </div>
+<div class="threat-card">
+            <div class="threat-image-wrap">
+                <img src="echo.png" alt="Echo Threat">
+            </div>
+            <div class="threat-content">
+                <h3>Echo</h3>
+                <p>Phishing &amp; insider threats that imitate trust to steal sensitive information.</p>
+            </div>
+</div>
+<div class="threat-card">
+            <div class="threat-image-wrap">
+                <img src="shadowcode.png" alt="ShadowCode Threat">
+            </div>
+            <div class="threat-content">
+                <h3>ShadowCode</h3>
+                <p>Malware &amp; zero-day attacks that silently infiltrate systems.</p>
+            </div>
+        </div>
+        <div class="threat-card">
+            <div class="threat-image-wrap">
+                <img src="lockjaw.png" alt="LockJaw Threat">
+            </div>
+            <div class="threat-content">
+                <h3>LockJaw</h3>
+                <p>Ransomware attacks that lock your systems and demand payment.</p>
+            </div>
+        </div>
+
+        <div class="threat-card">
+            <div class="threat-image-wrap">
+                <img src="flood.png" alt="Flood Threat">
+            </div>
+            <div class="threat-content">
+                <h3>Flood</h3>
+                <p>Spam overload that hides dangerous links within endless noise.</p>
+            </div>
+        </div>
+
+        <div class="threat-card">
+            <div class="threat-image-wrap">
+                <img src="blackout.png" alt="Blackout Threat">
+            </div>
+            <div class="threat-content">
+                <h3>Blackout</h3>
+                <p>Cloud outages that disrupt access to critical systems and data.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 </main>
 
 <footer>
