@@ -13,7 +13,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
     <style>
-               .brand {
+.creator-card.cinematic {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.creator-game-image {
+    margin: 18px 0;
+}
+
+.creator-game-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7);
+    transition: transform 0.4s ease;
+}
+
+.creator-game-image img:hover {
+    transform: scale(1.03);
+}
+
+.image-caption {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+        .brand {
     font-size: 1.8rem;      /* Increase size for stronger presence */
     font-weight: 700;
     letter-spacing: 0.15em; /* Premium brand feel */
@@ -748,23 +776,38 @@
     <!-- Core content sections remain unchanged — Your existing content is preserved -->
 
     <!-- Creator Section -->
-    <section class="creator-section">
-        <div class="creator-card">
-            <div class="creator-photo-wrap">
-                <img src="portrait-makafui-bokor.jpg" alt="Makafui Bokor photo" class="creator-photo">
-            </div>
-            <div class="creator-info">
-                <div class="creator-name">Makafui Bokor</div>
-                <div class="creator-roles">Author · Cybersecurity Entrepreneur · Game Developer</div>
-                <p class="creator-bio">
-                    Makafui is the founder of ADENTITI Limited, author of 
-                    <em>Bridge: Closing the Cybersecurity Gap for Small Businesses</em> and 
-                    <em>Beaten! How Cyberbullying Affects You and How to Rise Stronger at Work, School, and Home</em>, and creator of the MAKORE Cybersecurity Board Game.
-                </p>
-                <a href="mailto:makafui.bokor@adentiti.ca" class="btn-primary">Contact Makafui →</a>
-            </div>
+<section class="creator-section">
+    <div class="creator-card cinematic">
+
+        <!-- LEFT: YOUR PHOTO -->
+        <div class="creator-photo-wrap">
+            <img src="portrait-makafui-bokor.jpg" alt="Makafui Bokor photo" class="creator-photo">
         </div>
-    </section>
+
+        <!-- RIGHT: YOUR INFO -->
+        <div class="creator-info">
+            <div class="creator-name">Makafui Bokor</div>
+            <div class="creator-roles">Author · Cybersecurity Entrepreneur · Game Developer</div>
+
+            <p class="creator-bio">
+                MAKORE was created from real cybersecurity workshops where people struggled to understand threats—until they could see them, interact with them, and make decisions in real time.
+            </p>
+
+            <!-- ADD THIS (YOUR GAME IMAGE) -->
+            <div class="creator-game-image">
+                <img src="makore-board-closeup.png" alt="Makore gameplay close-up">
+                <p class="image-caption">
+                    A single roll can trigger real-world cyber threats. Every move is a decision.
+                </p>
+            </div>
+
+            <a href="mailto:makafui.bokor@adentiti.ca" class="btn-primary">
+                Contact Makafui →
+            </a>
+        </div>
+
+    </div>
+</section>
     <section class="threats-section">
     <div class="threats-intro">
         <p class="section-kicker">Enter the threat zone</p>
