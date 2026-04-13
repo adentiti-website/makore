@@ -228,6 +228,22 @@
             color: var(--text-muted);
         }
 
+     .video-section {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container {
+    max-width: 960px;
+    width: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+}
         .hero-meta-dot {
             width: 6px;
             height: 6px;
@@ -590,7 +606,13 @@
         </aside>
     </div>
 </header>
-
+<section class="video-section">
+    <div class="video-container">
+        <video controls autoplay muted loop playsinline>
+            <source src="makore-intro.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
 <main>
     <!-- Core content sections remain unchanged — Your existing content is preserved -->
 
