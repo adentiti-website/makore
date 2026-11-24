@@ -3,660 +3,18 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MAKORE – Cybersecurity Board Game</title>
+    <title>MAKORE™ | The Cyber Resilience Game</title>
+<meta name="description" content="Discover MAKORE, a Canadian cybersecurity strategy board game. Pre-order your game, join a game night or enquire about corporate training and distribution." />
+<link rel="canonical" href="https://makore.ca/" />
 <meta property="og:title" content="MAKORE™ – Cybersecurity Board Game" />
 <meta property="og:description" content="Learn to defend your world—one move at a time. Cybersecurity made visual, playable, and unforgettable." />
-<meta property="og:image" content="makore-social-preview.jpg" />
+<meta property="og:image" content="https://makore.ca/makore-social-preview.jpg" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://makore.ca" />
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
 
-<style>
-:root {
-    --bg-dark: #050816;
-    --bg-card: #0f172a;
-    --accent: #38bdf8;
-    --accent-soft: rgba(56, 189, 248, 0.15);
-    --text-main: #e5e7eb;
-    --text-muted: #9ca3af;
-    --border-soft: rgba(148, 163, 184, 0.22);
-    --max-width: 1120px;
-    --radius-xl: 24px;
-    --radius-lg: 18px;
-    --radius-md: 14px;
-    --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.45);
-    --shadow-strong: 0 28px 70px rgba(0, 0, 0, 0.6);
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html {
-    -webkit-text-size-adjust: 100%;
-    scroll-behavior: smooth;
-}
-
-body {
-    margin: 0;
-    font-family: "Poppins", system-ui, sans-serif;
-    background: radial-gradient(circle at top, #111827 0%, #020617 55%, #000000 100%);
-    color: var(--text-main);
-    line-height: 1.6;
-    overflow-x: hidden;
-}
-
-img,
-video {
-    max-width: 100%;
-    display: block;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-header {
-    border-bottom: 1px solid var(--border-soft);
-    background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%);
-}
-
-main,
-.nav,
-.hero,
-.footer-inner,
-.video-container {
-    width: min(100%, var(--max-width));
-    margin-inline: auto;
-}
-
-.nav {
-    padding: 16px 20px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-}
-
-.logo img {
-    height: 60px;
-    width: auto;
-    border-radius: 8px;
-    flex-shrink: 0;
-}
-
-.brand {
-    font-size: 1.7rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    line-height: 1;
-}
-
-.nav-tagline {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    text-align: right;
-}
-
-.hero {
-    padding: 40px 20px 64px;
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
-    gap: 32px;
-    align-items: center;
-}
-
-.hero-kicker {
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--accent);
-    font-weight: 600;
-}
-
-.hero-title {
-    font-size: clamp(2.15rem, 4vw, 3.4rem);
-    line-height: 1.08;
-    margin: 12px 0 14px;
-    font-weight: 700;
-}
-
-.hero-subtitle {
-    color: var(--text-muted);
-    max-width: 40rem;
-    font-size: 1rem;
-}
-
-.hero-actions {
-    margin-top: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.btn-primary,
-.btn-ghost {
-    min-height: 48px;
-    border-radius: 999px;
-    padding: 12px 22px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    border: 1px solid transparent;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-align: center;
-    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease;
-}
-
-.btn-primary {
-    background: linear-gradient(120deg, #38bdf8, #4f46e5);
-    color: #fff;
-    box-shadow: 0 10px 25px rgba(15, 118, 255, 0.35);
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 18px 35px rgba(15, 118, 255, 0.42);
-}
-
-.btn-ghost {
-    background: rgba(15, 23, 42, 0.9);
-    color: var(--text-main);
-    border-color: rgba(148, 163, 184, 0.36);
-}
-
-.btn-ghost:hover {
-    border-color: var(--accent);
-    background: rgba(15, 23, 42, 1);
-}
-
-.hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px 18px;
-    margin-top: 18px;
-    font-size: 0.84rem;
-    color: var(--text-muted);
-}
-
-.hero-meta span {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.hero-meta-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 999px;
-    background: var(--accent);
-    flex-shrink: 0;
-}
-
-.hero-card {
-    border-radius: var(--radius-xl);
-    padding: 24px;
-    background: radial-gradient(circle at top, rgba(56, 189, 248, 0.25), rgba(15, 23, 42, 0.98));
-    border: 1px solid rgba(148, 163, 184, 0.34);
-    box-shadow: var(--shadow-strong);
-}
-
-.badge-pill {
-    display: inline-flex;
-    align-items: center;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: rgba(15, 23, 42, 0.78);
-    border: 1px solid rgba(148, 163, 184, 0.34);
-    font-size: 0.78rem;
-    margin-bottom: 14px;
-}
-
-.hero-card-title {
-    font-size: 1.3rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.hero-card-text {
-    color: var(--text-muted);
-    font-size: 0.95rem;
-    margin-bottom: 18px;
-}
-
-.hero-pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.hero-pill {
-    font-size: 0.78rem;
-    padding: 6px 10px;
-    border-radius: 999px;
-    background: rgba(15, 23, 42, 0.85);
-    border: 1px solid rgba(148, 163, 184, 0.42);
-}
-
-.video-section {
-    padding: 28px 20px 12px;
-}
-
-.video-container video {
-    width: 100%;
-    border-radius: 22px;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.65);
-}
-
-main {
-    padding: 24px 20px 72px;
-}
-
-.creator-section {
-    margin-top: 28px;
-}
-
-.creator-card {
-    display: grid;
-    grid-template-columns: minmax(240px, 0.9fr) minmax(0, 1.1fr);
-    gap: 28px;
-    align-items: center;
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.95), rgba(2, 6, 23, 0.95));
-    border: 1px solid var(--border-soft);
-    border-radius: var(--radius-xl);
-    padding: 24px;
-    box-shadow: var(--shadow-soft);
-}
-
-.creator-photo-wrap {
-    width: 100%;
-}
-
-.creator-photo {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
-}
-
-.creator-info {
-    min-width: 0;
-}
-
-.creator-name {
-    font-size: 1.6rem;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 6px;
-}
-
-.creator-roles {
-    color: var(--accent);
-    font-size: 0.92rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    margin-bottom: 14px;
-}
-
-.creator-bio {
-    color: var(--text-muted);
-    font-size: 0.98rem;
-    margin-bottom: 18px;
-}
-
-.creator-game-image {
-    margin: 18px 0 20px;
-}
-
-.creator-game-image img {
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
-    transition: transform 0.35s ease;
-}
-
-.creator-game-image img:hover {
-    transform: scale(1.02);
-}
-
-.image-caption {
-    margin-top: 10px;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    font-style: italic;
-}
-
-.threats-section {
-    padding: 80px 0 20px;
-    position: relative;
-}
-
-.threats-intro {
-    text-align: center;
-    max-width: 760px;
-    margin: 0 auto 42px;
-}
-
-.section-kicker {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--accent);
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    margin: 0 0 12px;
-    line-height: 1.1;
-    font-weight: 700;
-    text-shadow: 0 0 18px rgba(56, 189, 248, 0.12);
-}
-
-.section-subtitle {
-    color: var(--text-muted);
-    font-size: 1rem;
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-.threat-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 26px;
-}
-
-.threat-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 22px;
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.98));
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-}
-
-.threat-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at top, rgba(56, 189, 248, 0.16), transparent 55%);
-    opacity: 0.7;
-    pointer-events: none;
-}
-
-.threat-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(56, 189, 248, 0.45);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.72);
-}
-
-.threat-image-wrap {
-    position: relative;
-    overflow: hidden;
-    aspect-ratio: 4 / 5;
-    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-}
-
-.threat-image-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.45s ease, filter 0.45s ease;
-}
-
-.threat-card:hover .threat-image-wrap img {
-    transform: scale(1.05);
-    filter: brightness(1.05);
-}
-
-.threat-content {
-    padding: 18px 18px 22px;
-    position: relative;
-    z-index: 1;
-}
-
-.threat-content h3 {
-    margin: 0 0 8px;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 0.03em;
-}
-
-.threat-content p {
-    margin: 0;
-    color: var(--text-muted);
-    font-size: 0.92rem;
-    line-height: 1.6;
-}
-
-footer {
-    border-top: 1px solid rgba(30, 64, 175, 0.45);
-    padding: 18px 20px 28px;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    background: #020617;
-}
-
-.footer-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px 20px;
-    flex-wrap: wrap;
-}
-
-.footer-right {
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-/* iPad / tablet */
-@media (max-width: 1024px) {
-    .hero {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-        padding: 34px 20px 54px;
-    }
-
-    .hero-title {
-        font-size: clamp(2rem, 4.5vw, 2.8rem);
-    }
-
-    .creator-card {
-        grid-template-columns: 0.95fr 1.05fr;
-        gap: 22px;
-    }
-
-    .threat-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-/* smaller tablets / large phones */
-@media (max-width: 820px) {
-    .nav {
-        justify-content: center;
-        text-align: center;
-    }
-
-    .nav-tagline {
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero-subtitle,
-    .section-subtitle {
-        margin-inline: auto;
-    }
-
-    .hero-actions,
-    .hero-meta,
-    .hero-pill-row {
-        justify-content: center;
-    }
-
-    .creator-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .creator-photo-wrap {
-        max-width: 340px;
-        margin-inline: auto;
-    }
-
-    .creator-info {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .creator-bio {
-        max-width: 42rem;
-    }
-}
-
-/* iPhone */
-@media (max-width: 640px) {
-    .nav {
-        padding: 14px 16px 10px;
-    }
-
-    .logo img {
-        height: 50px;
-    }
-
-    .brand {
-        font-size: 1.35rem;
-        letter-spacing: 0.08em;
-    }
-
-    .nav-tagline {
-        font-size: 0.78rem;
-    }
-
-    .hero {
-        padding: 28px 16px 46px;
-        gap: 22px;
-    }
-
-    .hero-kicker,
-    .section-kicker {
-        font-size: 0.74rem;
-        letter-spacing: 0.16em;
-    }
-
-    .hero-title {
-        font-size: 1.95rem;
-        line-height: 1.16;
-    }
-
-    .hero-subtitle {
-        font-size: 0.95rem;
-    }
-
-    .hero-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .btn-primary,
-    .btn-ghost {
-        width: 100%;
-        padding: 14px 18px;
-        font-size: 0.98rem;
-    }
-
-    .hero-card {
-        padding: 20px;
-        border-radius: 20px;
-    }
-
-    .video-section {
-        padding: 18px 16px 8px;
-    }
-
-    main {
-        padding: 20px 16px 60px;
-    }
-
-    .creator-card {
-        padding: 18px;
-        gap: 18px;
-    }
-
-    .creator-name {
-        font-size: 1.4rem;
-    }
-
-    .creator-bio {
-        font-size: 0.95rem;
-    }
-
-    .threats-section {
-        padding: 60px 0 12px;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .section-subtitle {
-        font-size: 0.95rem;
-    }
-
-    .threat-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .threat-content h3 {
-        font-size: 1.08rem;
-    }
-
-    .threat-content p {
-        font-size: 0.9rem;
-    }
-
-    footer {
-        padding: 16px;
-    }
-
-    .footer-inner,
-    .footer-right {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 8px;
-    }
-}
-</style>
 </head>
 
 <body>
@@ -666,7 +24,7 @@ footer {
         <img src="makore-logo.png" alt="Makore Logo" style="height:60px; width:auto; border-radius:6px;">
         <span class="brand">MAKORE<b>™</b></span>
     </div>
-    <div class="nav-tagline">Cybersecurity Board Game</div>
+    <div class="nav-tagline">The Cyber Resilience Game</div>
 </div>
 
     <div class="hero">
@@ -679,13 +37,14 @@ footer {
                 them into stories, cards, and decisions.
             </p>
 
-           <div class="hero-actions">
-                <!-- Both buttons now send people to Eventbrite -->
-                <a href="https://www.eventbrite.ca/e/cybersecurity-game-night-learn-cyber-safety-through-play-tickets-1984299692797?aff=oddtdtcreator" class="btn-primary" target="_blank" rel="noopener">
-                    Join the game night →
+           <p class="price">$52 CAD <small>· Pre-order</small></p>
+<div class="hero-actions">
+                
+                <a href="https://www.eventbrite.ca/e/makoretm-the-cyber-resilience-game-tickets-2003854520814?aff=oddtdtcreator" class="btn-primary" target="_blank" rel="noopener">
+                    Pre-order MAKORE™ →
                 </a>
                 <a href="https://www.eventbrite.ca/e/cybersecurity-game-night-learn-cyber-safety-through-play-tickets-1984299692797?aff=oddtdtcreator" class="btn-ghost" target="_blank" rel="noopener">
-                    Watch & RSVP on Eventbrite
+                    Join a Game Night
                 </a>
             </div>
 
@@ -696,7 +55,7 @@ footer {
         </div>
 
         <aside class="hero-card">
-            <div class="badge-pill">Second edition · 2025</div>
+            <div class="badge-pill">The Cyber Resilience Game</div>
             <div class="hero-card-title">Cybersecurity, without the panic.</div>
             <p class="hero-card-text">
                 Each round explores phishing, ransomware, data leaks, and more—showing not just
@@ -704,7 +63,7 @@ footer {
             </p>
             <div class="hero-pill-row">
                 <span class="hero-pill">Solo or 2–6 players</span>
-                <span class="hero-pill">Ages 14–74 years</span>
+                <span class="hero-pill">Ages 14+</span>
                 <span class="hero-pill">60–90 minute sessions</span>
                 <span class="hero-pill">Beginner-friendly</span>
             </div>
@@ -713,8 +72,9 @@ footer {
 </header>
 <section class="video-section">
     <div class="video-container">
-        <video controls autoplay muted loop playsinline>
+        <video controls preload="metadata" playsinline aria-label="Introduction to MAKORE">
             <source src="makore-intro.mp4" type="video/mp4">
+        Your browser does not support embedded video.
         </video>
     </div>
 </section>
@@ -727,7 +87,7 @@ footer {
 
         <!-- LEFT: YOUR PHOTO -->
         <div class="creator-photo-wrap">
-            <img src="portrait-makafui-bokor.jpg" alt="Makafui Bokor photo" class="creator-photo">
+            <img loading="lazy" src="portrait-makafui-bokor.jpg" alt="Makafui Bokor photo" class="creator-photo">
         </div>
 
         <!-- RIGHT: YOUR INFO -->
@@ -741,13 +101,13 @@ footer {
 
             <!-- ADD THIS (YOUR GAME IMAGE) -->
             <div class="creator-game-image">
-                <img src="makore-board-closeup.png" alt="Makore gameplay close-up">
+                <img loading="lazy" src="makore-board-closeup.png" alt="Makore gameplay close-up">
                 <p class="image-caption">
                     A single roll can trigger real-world cyber threats. Every move is a decision.
                 </p>
             </div>
 
-            <a href="mailto:makafui.bokor@adentiti.ca" class="btn-primary">
+            <a href="mailto:kafui.bokor@gmail.com" class="btn-primary">
                 Contact Makafui →
             </a>
         </div>
@@ -767,7 +127,7 @@ footer {
 
                <div class="threat-card">
             <div class="threat-image-wrap">
-                <img src="whisper.png" alt="Whisper Threat">
+                <img loading="lazy" src="whisper.png" alt="Whisper Threat">
             </div>
             <div class="threat-content">
                 <h3>Whisper</h3>
@@ -776,7 +136,7 @@ footer {
         </div>
 <div class="threat-card">
             <div class="threat-image-wrap">
-                <img src="echo.png" alt="Echo Threat">
+                <img loading="lazy" src="echo.png" alt="Echo Threat">
             </div>
             <div class="threat-content">
                 <h3>Echo</h3>
@@ -785,7 +145,7 @@ footer {
 </div>
 <div class="threat-card">
             <div class="threat-image-wrap">
-                <img src="shadowcode.png" alt="ShadowCode Threat">
+                <img loading="lazy" src="shadowcode.png" alt="ShadowCode Threat">
             </div>
             <div class="threat-content">
                 <h3>ShadowCode</h3>
@@ -794,7 +154,7 @@ footer {
         </div>
         <div class="threat-card">
             <div class="threat-image-wrap">
-                <img src="lockjaw.png" alt="LockJaw Threat">
+                <img loading="lazy" src="lockjaw.png" alt="LockJaw Threat">
             </div>
             <div class="threat-content">
                 <h3>LockJaw</h3>
@@ -804,7 +164,7 @@ footer {
 
         <div class="threat-card">
             <div class="threat-image-wrap">
-                <img src="flood.png" alt="Flood Threat">
+                <img loading="lazy" src="flood.png" alt="Flood Threat">
             </div>
             <div class="threat-content">
                 <h3>Flood</h3>
@@ -814,7 +174,7 @@ footer {
 
         <div class="threat-card">
             <div class="threat-image-wrap">
-                <img src="blackout.png" alt="Blackout Threat">
+                <img loading="lazy" src="blackout.png" alt="Blackout Threat">
             </div>
             <div class="threat-content">
                 <h3>Blackout</h3>
@@ -825,11 +185,21 @@ footer {
     </div>
 </section>
 
+
+<section class="business-section" aria-labelledby="partners-title">
+ <div class="threats-intro"><p class="section-kicker">Beyond the board</p><h2 class="section-title" id="partners-title">Play. Learn. Defend.</h2><p class="section-subtitle">Bring cybersecurity education to your community, classroom or workplace through play.</p></div>
+ <div class="business-grid">
+ <article class="business-card"><h3>Corporate training</h3><p>Explore game-based cybersecurity awareness and team learning for your organization.</p><a class="btn-ghost" href="mailto:kafui.bokor@gmail.com?subject=MAKORE%20Corporate%20Training">Enquire about training</a></article>
+ <article class="business-card"><h3>Education &amp; community</h3><p>Introduce practical cyber safety to students, seniors and community groups through interactive sessions.</p><a class="btn-ghost" href="mailto:kafui.bokor@gmail.com?subject=MAKORE%20Education%20Partnership">Explore partnerships</a></article>
+ <article class="business-card"><h3>International distribution</h3><p>Interested in bringing MAKORE to your country, retail store or educational network? Connect with us.</p><a class="btn-ghost" href="mailto:kafui.bokor@gmail.com?subject=MAKORE%20Distribution">Become a partner</a></article>
+ </div>
+</section>
+<section class="closing" aria-labelledby="closing-title"><p class="section-kicker">The next move is yours</p><h2 class="section-title" id="closing-title">Thank you for supporting this journey.</h2><p>Help us make cybersecurity education more accessible, engaging and memorable.</p><p class="price">$52 CAD</p><a class="btn-primary" href="https://www.eventbrite.ca/e/makoretm-the-cyber-resilience-game-tickets-2003854520814?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer">Pre-order MAKORE™ →</a></section>
 </main>
 
 <footer>
     <div class="footer-inner">
-        <span>© 2025 Makore. A product of ADENTITI Limited.</span>
+        <span>© 2026 MAKORE™. A product of <a href="https://adentiti.ca/">ADENTITI Limited</a>.</span>
         <div class="footer-right">
             <span>Built in Toronto, Canada.</span>
             <span>Inspired by real cyber stories.</span>
